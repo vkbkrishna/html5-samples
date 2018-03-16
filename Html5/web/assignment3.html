@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function togglePlayPause() {
+	   var btn = document.getElementById('play-pause-button');
+	   var mediaPlayer = document.getElementById('media-video');
+	   if (mediaPlayer.paused || mediaPlayer.ended) {
+	      btn.title = 'pause';
+	     // btn.sytle.backgroundColor = '#4a5568';
+	      btn.innerHTML = 'pause ||';
+	     // btn.className = 'pause';
+	      mediaPlayer.play();
+	   }
+	   else {
+	      btn.title = 'play';
+	     // btn.sytle.backgroundColor = '#4CAF50';
+	      btn.innerHTML = 'play >';
+	     // btn.className = 'play';
+	      mediaPlayer.pause();
+	   }
+	}
+function change(a){
+	var mediaPlayer = document.getElementById('media-video');
+	if(a == 1){
+		mediaPlayer.src = "https://www.w3schools.com/html/mov_bbb.mp4";
+	}
+	else if(a ==2){
+		mediaPlayer.src = "https://www.w3schools.com/html/movie.mp4";
+	} 
+	mediaplayer.play();
+}
+</script>
+<style>
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+header, footer {
+    padding: 1em;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.main {
+    padding: 1em;
+    color: white;
+    background-color: gray;
+    clear: left;
+    text-align: center;
+}
+
+#video_content {
+    margin1-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+.play {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Awesome videos online</h1>
+</header>
+
+<div class="main">
+   <div class="topnav">
+   <a href="#" onclick="change('1')"><img src="img/v1.png"/></a>
+  <a class="active" href="#" onclick="change('2')"><img src="img/v2.png"/></a>
+</div>
+</div>
+
+  
+<div id="video_content">
+<video width="400" id="media-video">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<div id='media-controls'>
+   <button id='play-pause-button'  class='play'  title='play' onclick='togglePlayPause();'>Play ></button>
+</div>
+
+
+
+<footer>Copyright &copy; 2018</footer>
+
+</div>
+
+</body>
+</html>

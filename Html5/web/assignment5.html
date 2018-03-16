@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<style>
+#container {
+  width: 90%;
+  height:90%;
+  border: 1px solid red;
+  
+  
+  margin: 0px auto;
+  text-align: center;
+}
+
+#canvas {
+  border: 1px solid blue;
+  width: 80%;
+  height: 80%;
+  
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<span>BCCI (Board of Control of Cricket)</span>
+	<canvas id="chart" style="width:60%"></canvas>
+</div>
+
+</body>
+<script>
+var ctx = document.getElementById('chart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["5", "10", "15", "20"],
+        datasets: [{
+            label: "Runs per Over.",
+            backgroundColor: 'white',
+            borderColor: 'rgb(255, 99, 132)',
+            fill: false,
+            data: [40, 75, 140, 210]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>
+</html>

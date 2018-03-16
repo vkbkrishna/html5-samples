@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registration form</title>
+<style>
+body {
+	background-image: url("img/clouds.jpg");
+	background-repeat: no-repeat;
+	background-size: cover
+}
+
+.header img {
+	float: left;
+	#width: 50px;
+	height: 100px; 
+	#background: #555; 
+	display: inline;
+}
+
+.header h1s {
+	position: relative;
+	top: 18px;
+	left: 10px; #
+	display: inline;
+}
+
+.forminp {
+	margin: 20px;
+}
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<img class="img-responsive" src="img/balloon.png" />
+		<h1>XENA Hot Air Balloon Races</h1>
+	</div>
+
+	<hr></hr>
+
+	<div ><h2>Online registration now open</h2></div>
+	
+	<span class="clearfix"></span>
+
+<div id="register" class="container">
+		<form action="#" autocomplete="on">
+			<h3>Your info</h3>
+			<span class="clearfix"></span>
+			<p></p>
+
+			<div class="col-md-6 form-group required" >
+				<label for="fname" class="control-label">First Name:</label> <input name="fname" id="fname" class="form-control" type="text" required/>
+			</div>
+			<div class="col-md-6 form-group required" >
+				<label for="lname" class="control-label">Last Name:</label> <input name="lname" id="lname" class="form-control"	type="text" required/>
+			</div>
+
+			<div class="col-md-6 form-group required">
+				<label for="email" class="control-label">Email:</label> <input name="email" id="email" class="form-control" type="email" required/>
+			</div>
+			<div class="col-md-6 form-group required">
+				<label for="cfemail" class="control-label">Confirm Email:</label> <input name="cfemail" id="cfemail" class="form-control" type="email" required/>
+			</div>
+			
+			<div class="col-md-6 form-group required">
+				<label for="pwd" class="control-label">Password:</label> <input name="pwd" id="pwd" class="form-control" type="password" required/>
+			</div>
+			<div class="col-md-6 form-group required">
+				<label for="cfpwd" class="control-label">Confirm Password:</label> <input name="cfpwd" id="cfpwd" class="form-control"	type="password" required/>
+			</div>
+			
+			<span class="clearfix"></span>
+			<p></p>
+			<h3>Additional Info</h3>
+			<span class="clearfix"></span>
+			<div class="row">
+				<div class="col-md-4 form-group required" >
+					<label for="dob" class="control-label">DOB:</label> <input name="dob" id="dob" class="form-control" type="date" required/>
+				</div>
+				<div class="col-md-2 form-group required">
+					<label for="dob" class="control-label">Gender:</label> 
+					<div class="form-check">
+					    <input class="form-check-input" name="gender" type="radio" id="m">
+					    <label for="m" class="form-check-label" for="gender">Male</label>
+					</div>
+					<div class="form-check">
+					    <input class="form-check-input" name="gender" type="radio" id="f">
+					    <label for="f" class="form-check-label" for="gender">Female</label>
+					</div>
+				</div>
+				<div class="col-md-6 form-group required">
+				<label for="phone" class="control-label">Phone:</label> <input name="phone" id="phoen" class="form-control"	type="text" required/>
+			</div>
+			</div>
+			<span class="clearfix"></span>
+			<p></p>
+			<h3>Address</h3>
+			<span class="clearfix"></span>
+			<div class="row">
+				<div class="col-md-6 form-group required">
+				<label for="street" class="control-label">Street Address:</label> <input name="street" id="street" class="form-control" type="text" required/>
+				</div>
+				<div class="col-md-3 form-group required">
+					<label for="cntry" class="control-label">Country:</label> 
+					<select class="form-control"  name="cntry" id="cntry" required>
+						<Option>United States<Option>
+						<Option>Others<Option>
+					</select>
+				</div>
+				<div class="col-md-3 form-group required">
+					<label for="zip" class="control-label">Zip Code:</label> <input name="zip" id="zip" class="form-control"	type="number" pattern="(\d{5}([\-]\d{4})?)" required/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 form-group required">
+					<button type="submit" class="btn btn-lg" style="width:70%">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	   <!--Footer-->
+      <footer class="page-footer font-small blue pt-4 mt-4">
+      
+          <!--Footer Links-->
+          <div class="container-fluid text-center text-md-left">
+              <div class="row">
+      
+                  <!--First column-->
+                  <div class="col-md-6">
+                      <h5 class="text-uppercase">Xena baloon race</h5>
+                      <p>100 Washington street, NY 05321</p>
+                  </div>
+                  <div class="col-md-6">
+                      <h5 class="text-uppercase">Follow us</h5>
+                      <p>Facebook Twitter Google plus</p>
+                  </div>
+                  <!--/.First column-->
+      
+                 
+              </div>
+          </div>
+          <!--/.Footer Links-->
+      
+          <!--Copyright-->
+          <div class="footer-copyright py-3 text-center">
+              <div class="container-fluid">
+                  © 2018 Copyright: <a href="#/"> Xenabaloonrace.com </a>
+      
+              </div>
+          </div>
+          <!--/.Copyright-->
+      
+      </footer>
+  </body>
+</html>
